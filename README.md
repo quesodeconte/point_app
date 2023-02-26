@@ -1,7 +1,12 @@
 # Installation
+## Prerequisites
+- ruby 3.2.0
+  
 ## Clone the Repo
 ```bash
 git clone https://github.com/quesodeconte/point_app.git
+```
+```bash
 cd point_app
 ```
 
