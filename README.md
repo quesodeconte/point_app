@@ -1,6 +1,9 @@
 # Installation
 ## Prerequisites
 - ruby 3.2.0
+- git 2.32.1
+- sqlite 3.37.0
+- VSCode (Run as Admin)
   
 ## Clone the Repo
 ```bash
@@ -15,9 +18,13 @@ cd point_app
 bundle install
 ```
 
+## Drop Existing Database (Optional - Only if already exists)
+```bash
+rake db:drop
+```
 ## Run Database Migrations
 ```bash
-rake db:drop db:create db:migrate
+rake db:create db:migrate
 ```
 
 ## Run Database Seeding
