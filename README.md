@@ -1,24 +1,29 @@
-# README
+# Installation
+## Clone the Repo
+```bash
+git clone https://github.com/quesodeconte/point_app.git
+cd point_app
+```
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Install Dependencies
+```bash
+bundle install
+```
 
-Things you may want to cover:
+## Run Database Migrations
+```bash
+rails db:migrate
+```
 
-* Ruby version
+## Run Database Seeding
+```bash
+rails db:seed
+```
+# Start the App
+## Run Rails Server
+```bash
+rails s
+```
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Navigate to the Login Page
+http://localhost:3000/admin

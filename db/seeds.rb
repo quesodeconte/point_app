@@ -5,19 +5,41 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-AdminUser.create!(email: 'kana@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+AdminUser.create!([
+    {
+        name: "小林　可奈",
+        email: 'kana@example.com',
+        is_admin: 1,
+        password: 'password',
+        password_confirmation: 'password'
+    },
+    {
+        name: "小林　千紘",
+        email: 'chi@example.com',
+        is_admin: 0,
+        password: 'password',
+        password_confirmation: 'password'
+    },
+    {
+        name: "ホプキンス　マット",
+        email: 'matt@example.com',
+        is_admin: 1,
+        password: 'password',
+        password_confirmation: 'password'
+    }
+])
 
 Point.create!([
     {
-        "name": "Kana",
+        "admin_users_id": 0,
         "total": 100
     },
     {
-        "name": "Chii",
-        "total": 0
+        "admin_users_id": 1,
+        "total": 20
     },
     {
-        "name": "Matt",
-        "total": 0
+        "admin_users_id": 2,
+        "total": 10
     }
 ])
