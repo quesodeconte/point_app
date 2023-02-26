@@ -1,4 +1,9 @@
 ActiveAdmin.register AdminUser do
+  controller do
+    before_action { @page_title = "Employees" }
+  end
+  navigation_menu :default
+
   permit_params :email, :password, :password_confirmation, :is_admin
 
   index do

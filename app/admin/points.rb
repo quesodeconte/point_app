@@ -8,7 +8,7 @@ ActiveAdmin.register Point do
   #
     permit_params :admin_user_id, :total
     
-    index do
+    index :title => 'All Employee Points' do
       # selectable_column
       column "Employee Name", :username, sortable: true 
       column "Points Total",:total, sortable: true
