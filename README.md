@@ -20,7 +20,7 @@ bundle install
 
 ## Drop Existing Database (Optional - Only if already exists)
 ```bash
-rake db:drop
+rake db:drop:_unsafe
 ```
 ## Run Database Migrations
 ```bash
