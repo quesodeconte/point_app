@@ -31,6 +31,11 @@ rake db:create db:migrate
 ```bash
 rake db:seed
 ```
+
+## Delete tmp directory
+```console
+rmdir /s tmp
+```
 # Start the App
 ## Run Rails Server
 ```bash
