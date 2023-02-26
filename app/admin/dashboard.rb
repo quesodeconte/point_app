@@ -32,6 +32,7 @@ ActiveAdmin.register_page "Dashboard" do
           thead do
             tr do
               th "Total Points"
+              th "Slip Number Used"
               th "Date Updated"
             end
           end
@@ -40,6 +41,7 @@ ActiveAdmin.register_page "Dashboard" do
             Point.where(admin_user_id: current_admin_user.id).order(created_at: :desc).each do |point|
               tr do
                 th point.total
+                th point.slip_number
                 th point.created_at
               end
             end

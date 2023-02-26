@@ -42,6 +42,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_07_100931) do
   create_table "points", force: :cascade do |t|
     t.integer "admin_user_id"
     t.integer "total"
+    t.integer "slip_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["admin_user_id"], name: "index_points_on_admin_user_id"
