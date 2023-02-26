@@ -29,17 +29,6 @@ AdminUser.create!([
     }
 ])
 
-Point.create!([
-    {
-        "admin_users_id": 0,
-        "total": 100
-    },
-    {
-        "admin_users_id": 1,
-        "total": 20
-    },
-    {
-        "admin_users_id": 2,
-        "total": 10
-    }
-])
+Point.create([{"admin_user_id": 1, "total": 100 }])
+Point.create([{"admin_user_id": 2, "total": 10 }])
+Point.create([{"admin_user_id": 3, "total": 5 }])

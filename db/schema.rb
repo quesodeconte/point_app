@@ -40,10 +40,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_07_100931) do
   end
 
   create_table "points", force: :cascade do |t|
-    t.string "admin_users_id"
+    t.integer "admin_user_id"
     t.integer "total"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["admin_user_id"], name: "index_points_on_admin_user_id"
   end
 
+  add_foreign_key "points", "admin_users"
 end

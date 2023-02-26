@@ -12,12 +12,12 @@ bundle install
 
 ## Run Database Migrations
 ```bash
-rails db:migrate
+rake db:drop db:create db:migrate
 ```
 
 ## Run Database Seeding
 ```bash
-rails db:seed
+rake db:seed
 ```
 # Start the App
 ## Run Rails Server
