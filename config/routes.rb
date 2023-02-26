@@ -5,4 +5,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  resources :spend_points
+  post '/admin/spend_points', to: 'spend_points#spend_points'
 end

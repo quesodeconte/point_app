@@ -11,21 +11,42 @@ ActiveAdmin.register_page "Dashboard" do
           thead do
             tr do
               th "Total Points"
-              th "Updated"
+              th "Date Updated"
+              th "Actions"
             end
           end
+
           tbody do
             tr do
-              th Point.first.total
-              th Point.first.created_at
+              th Point.where(admin_user_id: current_admin_user.id).order(created_at: :desc).first.total
+              th Point.where(admin_user_id: current_admin_user.id).order(created_at: :desc).first.created_at
+              th link_to "Spend Points", "/admin/spend_points"
             end
           end
         end
       end
     
       tab :points_history do
-      end
 
+        table do
+          thead do
+            tr do
+              th "Total Points"
+              th "Date Updated"
+            end
+          end
+
+          tbody do
+            Point.where(admin_user_id: current_admin_user.id).order(created_at: :desc).each do |point|
+              tr do
+                th point.total
+                th point.created_at
+              end
+            end
+          end
+        end
+
+      end
     end
   end
 
