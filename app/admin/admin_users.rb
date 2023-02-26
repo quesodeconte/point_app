@@ -4,6 +4,7 @@ ActiveAdmin.register AdminUser do
   index do
     selectable_column
     id_column
+    column :employee_name
     column :email
     column :current_sign_in_at
     column :is_admin

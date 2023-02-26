@@ -5,4 +5,9 @@ class AdminUser < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :point, dependent: :destroy
+
+  def employee_name
+    self.name
+  end
+
 end
